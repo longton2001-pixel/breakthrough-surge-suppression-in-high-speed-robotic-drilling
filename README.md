@@ -20,9 +20,9 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
 
 ```text
 ├── core/           # Core modules: EMR optimization (HMS-SQP), Kinematics, Stiffness Identification
-├── scripts/        # Data validation and plotting scripts (Plotting Fig 11-14)
+├── scripts/        # Data validation and plotting scripts
 ├── data/           # Experimental datasets (Stiffness, Optimization, Kinematics)
-├── results/        # Scientific evaluation plots (Fig 11, 12, 13, 14)
+├── results/        # Generated evaluation plots (Fig 9, 12, 13, 14)
 ├── main.py         # Main entry point for EMR-based pose optimization demo
 └── requirements.txt
 ```
@@ -31,8 +31,8 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/research1_pose_optimization.git
-   cd research1_pose_optimization
+   git clone https://github.com/longton2001-pixel/breakthrough-surge-suppression-in-high-speed-robotic-drilling.git
+   cd breakthrough-surge-suppression-in-high-speed-robotic-drilling
    ```
 
 2. Install dependencies:
