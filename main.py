@@ -1,7 +1,7 @@
 """
 Robotic Drilling Pose Optimization Demo
 Main entry point for comparing HMS-SQP with baseline global optimization algorithms.
-Evaluates four typical configurations (EMR Best, Stiff Best, Mass Best, EMR Worst)
+Evaluates four typical configurations (EMR Best, Stiff Best, Mass Best, Random Feasible)
 and reports performance metrics.
 """
 
@@ -75,8 +75,8 @@ def main():
                                      {'type': 'eq', 'fun': lambda q: optimizer.constraint_orientation(q, target_n)}))
     print("Done")
 
-    # (4) EMR Worst Case (Valid but Bad)
-    print("  [4/4] Searching for Performance-Worst (Valid) configuration...", end=" ", flush=True)
+    # (4) Random Feasible Case
+    print("  [4/4] Searching for Random-Feasible configuration...", end=" ", flush=True)
     bad_q = None
     max_cost = -1.0
     for _ in range(50):
@@ -97,7 +97,7 @@ def main():
     print("=" * 80)
     qs = [res_emr.x, res_stiff.x, res_mass.x, bad_q]
     
-    header = f"{'Metric':<20} | {'EMR Best':^13} | {'Stiff Best':^13} | {'Mass Best':^13} | {'EMR Worst':^13}"
+    header = f"{'Metric':<20} | {'EMR Best':^13} | {'Stiff Best':^13} | {'Mass Best':^13} | {'Random Feas.':^13}"
     print(header)
     print("-" * 80)
     
