@@ -52,7 +52,7 @@ Run the corresponding scripts to generate the figures presented in the paper:
 - `python scripts/plot_kinematics.py`: Generate **Fig 14** (Kinematics analysis)
 - `python scripts/plot_optimization.py`: Generate **Fig 12** (Optimization comparison)
 - `python scripts/plot_validation_final.py`: Generate **Fig 9** (Validation results)
-- `python scripts/plot_radius_error.py`: Generate **Fig 13** (Radius error analysis)
+- `python scripts/plot_diameter_error.py`: Generate **Fig 13** (Diameter error analysis)
 
 ## Citation
 
