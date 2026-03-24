@@ -13,7 +13,6 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
 - Reveal the transient energy conversion mechanism of the breakthrough surge and establish an Energy-Mass Ratio metric for dynamic modeling.
 - Propose a Stiffness-Inertia Dynamic Synergistic Optimization strategy to effectively suppress transient impacts during high-speed robotic drilling.
 - Develop a Hybrid Multi-Start Sequential Quadratic Programming algorithm for global posture optimization in non-convex configuration spaces.
-- Demonstrate that the SIDSO strategy significantly reduces surge velocity amplification and hole diameter errors compared to single-objective methods.
 
 ## Directory Structure
 
