@@ -3,7 +3,7 @@
 This repository contains the core algorithms and evaluation scripts for the paper: 
 
 **"Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling"**  
-*Authors: Dong Liu, Bohan Feng, Sun Jin*  
+*Authors: Dong Liu, Bohan Feng, Qunfei Gu, Shun Liu, Mian Li, Sun Jin*  
 *Shanghai Jiao Tong University*
 
 ## Abstract
