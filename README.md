@@ -7,14 +7,13 @@ This repository contains the core algorithms and evaluation scripts for the pape
 *Shanghai Jiao Tong University*
 
 ## Abstract
-Driven by the shift toward large-scale integrated die-casting in new energy vehicle (NEV) manufacturing, industrial robots are being explored for high-speed drilling. However, the "breakthrough surge" triggered by the rapid release of stored elastic energy significantly affects machining accuracy. To tackle this, we propose a **Stiffness-Inertia Dynamic Synergistic Optimization (SIDSO)** strategy. We introduce an **Energy-Mass Ratio (EMR)** metric to quantify the combined effect of system compliance and operational-space inertia. A **Hybrid Multi-Start Sequential Quadratic Programming (HMS-SQP)** algorithm is used for global posture optimization. Machining tests show that SIDSO-optimized postures reduce the average surge velocity amplification ratio by 53.5% and the mean radial dimensional error by 39.5%.
+Driven by the shift toward large-scale integrated die-casting in new energy vehicle (NEV) manufacturing, industrial robots are being explored for high-speed drilling. However, the "breakthrough surge" triggered by the rapid release of stored elastic energy significantly affects machining accuracy. To tackle this, we propose a **Stiffness-Inertia Dynamic Synergistic Optimization (SIDSO)** strategy. We introduce an **Energy-Mass Ratio (EMR)** metric to quantify the combined effect of system compliance and operational-space inertia. A **Hybrid Multi-Start Sequential Quadratic Programming (HMS-SQP)** algorithm is used for global posture optimization. Machining tests show that SIDSO-optimized postures reduce the average surge velocity amplification ratio by 53.5% and the mean hole diameter error by 39.5%.
 
 ## Research Highlights
-- Energy conversion mechanism of robotic drilling breakthrough surge is revealed.
-- An Energy-Mass Ratio (EMR) metric quantifies stiffness-inertia dynamic synergy.
-- A Stiffness-Inertia Dynamic Synergistic Optimization (SIDSO) strategy is proposed.
-- An HMS-SQP algorithm enables global posture optimization in non-convex space.
-- Ablation tests demonstrate the advantage of stiffness-inertia synergy in surge suppression.
+- Reveal the transient energy conversion mechanism of the breakthrough surge and establish an Energy-Mass Ratio metric for dynamic modeling.
+- Propose a Stiffness-Inertia Dynamic Synergistic Optimization strategy to effectively suppress transient impacts during high-speed robotic drilling.
+- Develop a Hybrid Multi-Start Sequential Quadratic Programming algorithm for global posture optimization in non-convex configuration spaces.
+- Demonstrate that the SIDSO strategy significantly reduces surge velocity amplification and hole diameter errors compared to single-objective methods.
 
 ## Directory Structure
 
