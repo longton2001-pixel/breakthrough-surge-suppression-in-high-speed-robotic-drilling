@@ -1,2 +1,71 @@
-# breakthrough-surge-suppression-in-high-speed-robotic-drilling
-Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling
+# Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling
+
+This repository contains the core algorithms and evaluation scripts for the paper: 
+
+**"Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling"**  
+*Authors: Dong Liu, Bohan Feng, Sun Jin*  
+*Shanghai Jiao Tong University*
+
+## Abstract
+Driven by the shift toward large-scale integrated die-casting in new energy vehicle (NEV) manufacturing, industrial robots are being explored for high-speed drilling. However, the "breakthrough surge" triggered by the rapid release of stored elastic energy significantly affects machining accuracy. To tackle this, we propose a **Stiffness-Inertia Dynamic Synergistic Optimization (SIDSO)** strategy. We introduce an **Energy-Mass Ratio (EMR)** metric to quantify the combined effect of system compliance and operational-space inertia. A **Hybrid Multi-Start Sequential Quadratic Programming (HMS-SQP)** algorithm is used for global posture optimization. Machining tests show that SIDSO-optimized postures reduce the average surge velocity amplification ratio by 53.5% and the mean radial dimensional error by 39.5%.
+
+## Research Highlights
+- Energy conversion mechanism of robotic drilling breakthrough surge is revealed.
+- An Energy-Mass Ratio (EMR) metric quantifies stiffness-inertia dynamic synergy.
+- A Stiffness-Inertia Dynamic Synergistic Optimization (SIDSO) strategy is proposed.
+- An HMS-SQP algorithm enables global posture optimization in non-convex space.
+- Ablation tests demonstrate the advantage of stiffness-inertia synergy in surge suppression.
+
+## Directory Structure
+
+```text
+├── core/           # Core modules: EMR optimization (HMS-SQP), Kinematics, Stiffness Identification
+├── scripts/        # Data validation and plotting scripts (Plotting Fig 11-14)
+├── data/           # Experimental datasets (Stiffness, Optimization, Kinematics)
+├── results/        # Scientific evaluation plots (Fig 11, 12, 13, 14)
+├── main.py         # Main entry point for EMR-based pose optimization demo
+└── requirements.txt
+```
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/research1_pose_optimization.git
+   cd research1_pose_optimization
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Quick Start
+
+### 1. Pose Optimization Demo
+To see the EMR-based pose generation algorithm in action:
+- `python main.py`: Run the core EMR pose optimization demo with baseline comparisons (DE/DA).
+
+### 2. Reproduce Research Figures
+Run the corresponding scripts to generate the figures presented in the paper:
+- `python scripts/run_stiffness_identification.py`: Execute the joint stiffness identification process using experimental data in `data/stiffness_data/`.
+- `python scripts/plot_kinematics.py`: Generate **Fig 14** (Kinematics analysis)
+- `python scripts/plot_optimization.py`: Generate **Fig 12** (Optimization comparison)
+- `python scripts/plot_validation_final.py`: Generate **Fig 9** (Validation results)
+- `python scripts/plot_radius_error.py`: Generate **Fig 13** (Radius error analysis)
+
+## Citation
+
+If you use this code in your research, please cite our paper:
+```bibtex
+@article{yourcitation,
+  title={...},
+  author={...},
+  journal={...},
+  year={2026}
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. (Note: The core optimization engine is provided as source code here for review; please contact the authors for commercial use.)
