@@ -33,7 +33,7 @@ matplotlib.rcParams.update({
 
 # Load Data
 data = []
-DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'radius_error_data.csv')
+DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'diameter_error_data.csv')
 with open(DATA_PATH, 'r', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     reader.fieldnames = [name.strip() for name in reader.fieldnames]
