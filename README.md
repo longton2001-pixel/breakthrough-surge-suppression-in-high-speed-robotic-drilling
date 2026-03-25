@@ -38,6 +38,19 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
    pip install -r requirements.txt
    ```
 
+## Robot Parameters
+
+The kinematic, dynamic, and stiffness parameters for the FANUC R-2000iC robot are centrally managed in `core/config.py`.
+
+### 1. Dynamics & Inertia
+The inertial parameters (mass, center of mass, and inertia tensor) for each link were obtained from **official CAD assemblies**.
+- **Component Details**: Each of the six link assemblies considers the complete physical structure. Specifically, the **high-speed electric spindle** and the drilling tool-holder are fully integrated into the mass and inertia properties of the **6th link (J6)** to ensure the accuracy of operational-space mass calculations.
+- **Process**: Material properties (e.g., high-strength alloy steel, aluminum, or motor-specific densities) were assigned to each component in CAD. Mass properties were then measured relative to the defined MDH coordinate frames.
+- **Accuracy**: These parameters represent the "as-built" configuration used in the drilling experiments.
+
+### 2. Joint Stiffness
+Joint stiffness values were identified using the experimental data and the identification algorithm provided in `core/stiffness_identification.py`.
+
 ## Quick Start
 
 ### 1. Pose Optimization Demo
