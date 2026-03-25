@@ -42,7 +42,7 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
 
 ### 1. Pose Optimization Demo
 To see the EMR-based pose generation algorithm in action:
-- `python main.py`: Run the core EMR pose optimization demo with baseline comparisons (DE/DA).
+- `python main.py`: Run the core EMR pose optimization demo with baseline comparisons.
 
 ### 2. Reproduce Research Figures
 Run the corresponding scripts to generate the figures presented in the paper:
