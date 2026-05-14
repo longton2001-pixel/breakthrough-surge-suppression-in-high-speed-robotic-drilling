@@ -1,6 +1,6 @@
 # Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling
 
-This repository contains the core algorithms and evaluation scripts for the paper: 
+This repository contains the core algorithms and evaluation scripts for the paper:
 
 **"Stiffness-inertia dynamic synergy for breakthrough surge suppression in high-speed robotic drilling"**  
 *Authors: Dong Liu, Bohan Feng, Qunfei Gu, Shun Liu, Mian Li, Sun Jin*  
@@ -17,12 +17,14 @@ Driven by the shift toward large-scale integrated die-casting in new energy vehi
 ## Directory Structure
 
 ```text
-├── core/           # Core modules: EMR optimization (HMS-SQP), Kinematics, Stiffness Identification
-├── scripts/        # Data validation and plotting scripts
-├── data/           # Experimental datasets (Stiffness, Optimization, Kinematics)
-├── results/        # Generated evaluation plots (Fig 9, 12, 13, 14)
-├── main.py         # Main entry point for EMR-based pose optimization demo
-└── requirements.txt
+core/             # Core modules: EMR optimization, kinematics, and stiffness identification
+scripts/          # Reproduction, validation, sensitivity-analysis, and plotting scripts
+data/             # Experimental datasets for stiffness, optimization, validation, kinematics, and damping sensitivity
+results/          # Generated evaluation plots and sensitivity-analysis tables
+examples/         # Adaptation templates for other robot and material configurations
+tests/            # Lightweight regression tests
+main.py           # Main entry point for the EMR-based pose optimization demo
+requirements.txt
 ```
 
 ## Installation
@@ -51,6 +53,12 @@ The inertial parameters (mass, center of mass, and inertia tensor) for each link
 ### 2. Joint Stiffness
 Joint stiffness values were identified using the experimental data and the identification algorithm provided in `core/stiffness_identification.py`.
 
+## Transferability to Other Robots and Materials
+
+The SIDSO framework separates the optimization algorithm from robot- and process-specific physical parameters. To transfer the method to another robot configuration, update the kinematic parameters, link inertial properties, joint limits, joint stiffness matrix, and tool-frame transform in `core/config.py`. The same HMS-SQP search and EMR objective can then be reused with the new robot model.
+
+For a different workpiece material or drilling condition, the process inputs should be recalibrated because thrust force, feed velocity, stiffness response, and damping behavior may change with the material and cutting parameters. The template in `examples/transferability_config_template.py` summarizes the required robot, tool, and material/process fields that should be checked before applying the workflow to a new setup.
+
 ## Quick Start
 
 ### 1. Pose Optimization Demo
@@ -60,10 +68,16 @@ To see the EMR-based pose generation algorithm in action:
 ### 2. Reproduce Research Figures
 Run the corresponding scripts to generate the figures presented in the paper:
 - `python scripts/run_stiffness_identification.py`: Execute the joint stiffness identification process using experimental data in `data/stiffness_data/`.
-- `python scripts/plot_kinematics.py`: Generate **Fig 14** (Kinematics analysis)
-- `python scripts/plot_optimization.py`: Generate **Fig 12** (Optimization comparison)
-- `python scripts/plot_validation_final.py`: Generate **Fig 9** (Validation results)
-- `python scripts/plot_diameter_error.py`: Generate **Fig 13** (Diameter error analysis)
+- `python scripts/plot_kinematics.py`: Generate **Fig 14** (Kinematics analysis).
+- `python scripts/plot_optimization.py`: Generate **Fig 12** (Optimization comparison).
+- `python scripts/plot_validation_final.py`: Generate **Fig 9** (Validation results).
+- `python scripts/plot_diameter_error.py`: Generate **Fig 13** (Diameter error analysis).
+
+### 3. Damping Sensitivity Analysis
+- `python scripts/damping_sensitivity_analysis.py`: Reproduce the two-level damping sensitivity analysis using `data/damping_sensitivity_data.csv` and write `results/damping_sensitivity_table.csv` and `results/damping_sensitivity_table.md`.
+
+### 4. Tests
+- `python -m unittest discover tests`: Run the lightweight regression tests.
 
 ## Citation
 

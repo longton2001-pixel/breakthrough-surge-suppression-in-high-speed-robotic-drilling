@@ -191,6 +191,10 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Reproducibility data/results intentionally kept in version control
+!data/damping_sensitivity_data.csv
+!results/damping_sensitivity_table.csv
+
 # PyPI configuration file
 .pypirc
 
