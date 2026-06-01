@@ -74,7 +74,7 @@ Run the corresponding scripts to generate the figures presented in the paper:
 - `python scripts/plot_diameter_error.py`: Generate **Fig 13** (Diameter error analysis).
 
 ### 3. Damping Sensitivity Analysis
-- `python scripts/damping_sensitivity_analysis.py`: Reproduce the two-level damping sensitivity analysis using `data/damping_sensitivity_data.csv` and write `results/damping_sensitivity_table.csv` and `results/damping_sensitivity_table.md`.
+- `python scripts/damping_sensitivity_analysis.py`: Reproduce the damping sensitivity analysis using `data/damping_sensitivity_data.csv` and write `results/damping_sensitivity_table.csv`.
 
 ### 4. Tests
 - `python -m unittest discover tests`: Run the lightweight regression tests.

@@ -1,9 +1,6 @@
-case,eta_setting,trials,velocity_scale_vs_baseline,spearman_mean,spearman_std,spearman_min,spearman_p05,spearman_p95,spearman_max,mean_predicted_v_surge_mm_s
-constant_eta,0.8eta0,1,0.800000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,35.879581
-constant_eta,0.9eta0,1,0.900000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,40.364529
-constant_eta,1.0eta0,1,1.000000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,44.849477
-constant_eta,1.1eta0,1,1.100000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,49.334424
-constant_eta,1.2eta0,1,1.200000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,53.819372
-posture_wise_random_eta,+/-10%,1000,1.000000,0.963286,0.032544,0.880952,0.904762,1.000000,1.000000,44.798338
-posture_wise_random_eta,+/-20%,1000,1.000000,0.928214,0.052070,0.714286,0.833333,1.000000,1.000000,44.857638
-posture_wise_random_eta,+/-30%,1000,1.000000,0.876929,0.082946,0.547619,0.714286,0.976190,1.000000,44.746688
+case,eta_setting,trials,velocity_scale_vs_baseline,spearman_mean,spearman_std,spearman_min,spearman_p05,spearman_p95,spearman_max,mean_predicted_v_surge_mm_s,top1_delta_crit,top3_delta_crit,top1_robust_pm10,top1_robust_pm20,top1_robust_pm30,top1_reference_id,top1_limiting_competitor_id,top3_limiting_pair,interpretation
+uniform_damping_factor,common eta factor,1,1.000000,1.000000,0.000000,1.000000,1.000000,1.000000,1.000000,44.849477,,,,,,,,,"In Eq. (31), a damping factor common to all postures is a common multiplicative factor; it scales absolute predicted surge velocity but leaves the EMR-based rank order unchanged."
+posture_wise_random_eta,+/-10%,1000,1.000000,0.963286,0.032544,0.880952,0.904762,1.000000,1.000000,44.798338,,,,,,,,,"Posture-wise eta_i = eta0(1 + eps_i), eps_i sampled uniformly within the listed bound; this is a conservative damping-uncertainty stress test, not an identified physical posture-dependent damping model."
+posture_wise_random_eta,+/-20%,1000,1.000000,0.928214,0.052070,0.714286,0.833333,1.000000,1.000000,44.857638,,,,,,,,,"Posture-wise eta_i = eta0(1 + eps_i), eps_i sampled uniformly within the listed bound; this is a conservative damping-uncertainty stress test, not an identified physical posture-dependent damping model."
+posture_wise_random_eta,+/-30%,1000,1.000000,0.876929,0.082946,0.547619,0.714286,0.976190,1.000000,44.746688,,,,,,,,,"Posture-wise eta_i = eta0(1 + eps_i), eps_i sampled uniformly within the listed bound; this is a conservative damping-uncertainty stress test, not an identified physical posture-dependent damping model."
+ranking_boundary,bounded unknown posture-wise eta,0,,,,,,,,,0.178223,0.190222,guaranteed,not guaranteed,not guaranteed,1,2,7 vs 8,"For eta_i in [eta0(1-delta), eta0(1+delta)], the minimum Top-1 delta_crit is 0.178223; the Top-3 boundary is 0.190222. The Top-1 rank is guaranteed at +/-10% but not guaranteed by the worst-case bound at +/-20% or +/-30%."
